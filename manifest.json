@@ -1,0 +1,27 @@
+{
+
+  "manifest_version": 2,
+  "name": "Switcher",
+  "version": "1.0",
+
+  "description": "A Proxy Setting Switcher For FireFox",
+
+  "icons": {
+    "32": "src/images/icons/tunnel_g_32x32.png",
+    "32": "src/images/icons/tunnel_d_32x32.png",
+    "32": "src/images/icons/tunnel_c_32x32.png"
+  },
+
+  "permissions": [
+    "proxy"
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "32": "src/images/icons/tunnel_c_32x32.png"
+    },
+    "default_title": "Switcher",
+    "default_popup": "src/panel/Switcher.html"
+  }
+
+}

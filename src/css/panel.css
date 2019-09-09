@@ -1,0 +1,199 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #4a4a4f;
+  color: #fff;
+  font-family: arial;
+  font-size: 11px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+hr {
+  margin: 10px 0px;
+  color: #4a43436e;
+}
+
+.clear {
+  clear: both;
+}
+
+.row {
+  position: relative;
+  margin: 8px;
+}
+
+.icon-title {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.icon {
+  border: 2px solid;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  position: relative;
+  top: 5px;
+}
+
+.icon img {
+  position: absolute;
+  left: 4px;
+  top: 3px;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.title b {
+  color: #97979d;
+}
+
+.title p {
+  margin-top: 5px;
+}
+
+.icon-title li {
+  margin: 0px 10px;
+  float: left;
+}
+
+.button-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.button-list li{
+  position: relative;
+  display: block;
+  padding: 6px 4px;
+  margin: 2px 0px;
+  border-radius: 2px;
+}
+
+.button-list li:not(:last-child):hover{
+  background: #0b0a0a17;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #0b0a0a17;
+  color: #fff;
+  border-bottom: 1px solid #000;
+  cursor: default;
+  transition: all 1000ms ease-in;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  right: 12px;
+  background: chartreuse;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  top: 8px;
+}
+
+.disable {
+  cursor: default;
+  color: #ccc;
+}
+
+.right-arrow {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icons/right-arrow.png");
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 0px;
+  float: right;
+}
+
+.noproxy {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icons/noproxy.png");
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 0px;
+  float: left;
+}
+
+.system {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icons/system.png");
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 0px;
+  float: left;
+  background-position-y: -1px;
+}
+
+.manual {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icons/manual.png");
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 0px;
+  float: left;
+}
+
+.bottom {
+  height: 25px;
+  position: relative;
+}
+
+.bottom a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+.bottom a:hover {
+  background-color: #333;
+  border-radius: 16px;
+}
+
+.github {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icons/github.png");
+  background-repeat: no-repeat;
+  margin: 0px -4px 0px 0px;
+  float: left;
+}
+
+.home-page {
+  display: inline-block;
+  width: 85px;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.home-page:hover {
+  background-color: #333;
+}
+
+.home-page span{
+  margin-left: 15px;
+}
+
+.version {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  width: 85px;
+  padding: 4px 8px;
+  border-radius: 15px;
+  float: right;
+  text-align: center;
+}
