@@ -7,7 +7,7 @@
   "description": "A Proxy Setting Switcher For FireFox",
 
   "icons": {
-    "32": "src/images/icons/tunnel_g_32x32.png",
+    "32": "src/images/icons/tunnel_c_32x32.png"
   },
 
   "permissions": [
