@@ -18,6 +18,12 @@ function setNoProxySetting() {
   let noproxy = document.getElementById("noproxy-id");
   noproxy.classList.add("active");
 
+  // call setBadgeText function from browserAction.js
+  setBadgeText("N");
+
+  let noProxySetIcon = document.getElementsByClassName("Switcher-icon-status");
+  noProxySetIcon[0].src = "../images/icons/set_noproxy.png";
+
   let noproxyText = document.getElementsByClassName("noproxy-text");
   noproxyText[0].innerText = "You Are Using No Proxy Mode";
 
@@ -41,6 +47,12 @@ function setSystemProxySetting() {
 
   let systemproxy = document.getElementById("systemproxy-id");
   systemproxy.classList.add("active");
+
+  // call setBadgeText function from browserAction.js
+  setBadgeText("S");
+
+  let systemProxySetIcon = document.getElementsByClassName("Switcher-icon-status");
+  systemProxySetIcon[0].src = "../images/icons/set_systemproxy.png";
 
   let noproxyText = document.getElementsByClassName("noproxy-text");
   noproxyText[0].innerText = "Switch To No Proxy";
@@ -82,6 +94,13 @@ function currentProxyType(proxyType) {
     let noproxyText = document.getElementsByClassName("noproxy-text");
     noproxyText[0].innerText = "You Are Using No Proxy Mode";
 
+    // call setBadgeText function from browserAction.js
+    setBadgeText("N");
+
+    let noProxySetIcon = document.getElementsByClassName("Switcher-icon-status");
+    noProxySetIcon[0].src = "../images/icons/set_noproxy.png";
+
+
     let systemproxyText = document.getElementsByClassName("systemproxy-text");
     systemproxyText[0].innerText = "Switch To System Proxy";
   }
@@ -93,13 +112,25 @@ function currentProxyType(proxyType) {
     let noproxyText = document.getElementsByClassName("noproxy-text");
     noproxyText[0].innerText = "Switch To No Proxy";
 
+    // call setBadgeText function from browserAction.js
+    setBadgeText("S");
+
+    let systemProxySetIcon = document.getElementsByClassName("Switcher-icon-status");
+    systemProxySetIcon[0].src = "../images/icons/set_systemproxy.png";
+
     let systemproxyText = document.getElementsByClassName("systemproxy-text");
     systemproxyText[0].innerText = "You Are Using System Proxy Mode";
   }
   else if(proxyType == "manual")
   {
+    // todo add manual config
+
     let manualproxy = document.getElementById("manualproxy-id");
     manualproxy.classList.add("active");
+
+    // call setBadgeText function from browserAction.js
+    setBadgeText("M");
+
   }
 
 }
