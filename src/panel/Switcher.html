@@ -24,9 +24,21 @@
     <hr>
     <div class="row">
       <ul class="button-list">
-        <li id="noproxy-id"><i class="noproxy"></i><span class="noproxy-text"> Switch To No Proxy</span></li>
-        <li id="systemproxy-id"><i class="system"></i><span class="systemproxy-text"> Switch To System Proxy</span></li>
-        <li id="manualproxy-id" class="disable"><i class="manual"></i><span> Set Manual Proxy</span><i class="right-arrow"></i></li>
+        <li id="noproxy-id">
+			<i class="noproxy"></i>
+			<span class="noproxy-text"> Switch To No Proxy</span>
+			<span id="noproxy-shortcut" class="shortcut-switch"> Alt+Ctrl+S </span>
+		</li>
+        <li id="systemproxy-id">
+			<i class="system"></i>
+			<span class="systemproxy-text"> Switch To System Proxy</span>
+			<span id="systemproxy-shortcut" class="shortcut-switch"> Alt+Ctrl+S </span>
+		</li>
+        <li id="manualproxy-id" class="disable">
+			<i class="manual"></i>
+			<span> Set Manual Proxy</span>
+			<i class="right-arrow"></i>
+		</li>
       </ul>
       <!-- button-list -->
     </div>
@@ -41,12 +53,13 @@
         <!-- home-page -->
       </a>
       <div class="version">
-        <span>Version : 1.0</span>
+        <span id="switcher-version">Version : ---  </span>
       </div>
       <!-- version -->
     </div>
     <!-- row -->
   </body>
-  <script src="../scripts/browserActions.js"></script>
-  <script src="../scripts/panel.js"></script>
+  <script src="../scripts/browser_actions.js"></script>
+  <script src="../scripts/panel.js"></script> 
+  <script src="../scripts/panel_functions.js"></script> 
 </html>

@@ -8,7 +8,8 @@ body {
   color: #fff;
   font-family: arial;
   font-size: 11px;
-  max-width: 300px;
+  width: 300px;
+  height: 215px;
   overflow: hidden;
 }
 
@@ -174,7 +175,7 @@ hr {
 
 .home-page {
   display: inline-block;
-  width: 85px;
+  width: 95px;
   padding: 4px 8px;
   border-radius: 15px;
 }
@@ -185,6 +186,8 @@ hr {
 
 .home-page span{
   margin-left: 15px;
+  position: relative;
+  top: 2px;
 }
 
 .version {
@@ -196,4 +199,15 @@ hr {
   border-radius: 15px;
   float: right;
   text-align: center;
+}
+
+.shortcut-switch {
+	float: right;	
+	color: #ccc;
+	font-size: 9px;
+	display: none;
+}
+
+.shortcut-active {
+	display: block;
 }

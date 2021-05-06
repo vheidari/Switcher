@@ -2,17 +2,34 @@
 
   "manifest_version": 2,
   "name": "Switcher",
-  "version": "1.1.1",
-
+  "version": "1.2.1",
+  "author": "Vahid Heidari",
+  "developer": {
+    "name": "Vahid Heidari",
+     "url": "https://github.com/vheidari"
+  },
   "description": "A Proxy Setting Switcher For FireFox",
 
   "icons": {
     "32": "src/images/icons/tunnel_c_32x32.png"
   },
 
+  "commands": {
+    "switch" : {
+	"suggested_key" : {
+	   "default": "Ctrl+Alt+S"
+	},
+	"description" : "Switch between system proxy and no proxy mode"
+    }
+  },
+
   "permissions": [
     "proxy"
   ],
+
+  "omnibox": {
+    "keyword": "switcher"
+  },
 
   "browser_action": {
     "default_icon": {
@@ -20,6 +37,12 @@
     },
     "default_title": "Switcher",
     "default_popup": "src/panel/Switcher.html"
+  },
+  
+  "background": {
+    "scripts": ["src/scripts/browser_actions.js", 
+	    	"src/scripts/background_startup.js",
+	    	"src/scripts/background_events.js",
+	    	"src/scripts/panel_functions.js"]
   }
-
 }
