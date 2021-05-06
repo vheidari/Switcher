@@ -3,7 +3,7 @@ Switcher is an open source addons developing for Mozilla Firefox.
 This Extension allows you to changing proxy setting on your browser with a click.
 
 # Downloading Switcher
-At this moment Switcher `version 1.0` available on `addons.mozilla.org`. for downloading and using this extension please go through the below link :
+At this moment Switcher `version 1.2.1` available on `addons.mozilla.org`. for downloading and using this extension please go through the below link :
 
 [Switcher](https://addons.mozilla.org/en-US/firefox/addon/switcher_proxy/) `https://addons.mozilla.org/en-US/firefox/addon/switcher_proxy/`
 
