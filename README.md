@@ -9,7 +9,7 @@ Here is a simple list of features that `Switcher` will bring to your browser.
 
 1.   An easy way to switch between proxy modes (`No Proxy`, `System Proxy`, `Manual Proxy`).
 2.   A simple, clean, and beautiful user interface based on `Firefox's` design.
-3.   Displays current proxy settings through an `icon badge` (N - Red, S - Green, M - Blue).
+3.   Displays current proxy settings through an `icon badge` (`N - Red`, `S - Green`, `M - Blue`).
 4.   Navigate through proxy modes using a convenient keyboard shortcut `(Alt + Ctrl + S)`.
 5.   A streamlined manual proxy settings form to effortlessly manage your manual proxy fields.
 6.   Automatically saves proxy settings in your browser, fully synchronized with Firefox proxy settings.

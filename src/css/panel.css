@@ -1,213 +1,474 @@
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-  background-color: #4a4a4f;
-  color: #fff;
-  font-family: arial;
-  font-size: 11px;
-  width: 300px;
-  height: 215px;
-  overflow: hidden;
+    background-color: #4a4a4f;
+    color: #fff;
+    font-family: arial;
+    font-size: 11px;
+    width: 300px;
+    min-height: 215px;
+    overflow: hidden;
+}
+
+input:focus,
+input:focus-visible {
+    border: none;
+    outline: none;
 }
 
 hr {
-  margin: 10px 0px;
-  color: #4a43436e;
+    margin: 10px 0px;
+    color: #4a43436e;
 }
 
 .clear {
-  clear: both;
+    clear: both;
 }
 
 .row {
-  position: relative;
-  margin: 8px;
+    position: relative;
+    margin: 8px;
 }
 
 .icon-title {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
 }
 
 .icon {
-  border: 2px solid;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  position: relative;
-  top: 5px;
+    border: 2px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: relative;
+    top: 5px;
 }
 
 .icon img {
-  position: absolute;
-  left: 4px;
-  top: 3px;
+    position: absolute;
+    left: 4px;
+    top: 3px;
+}
+
+.red-shadow {
+    box-shadow: 0px -0 35px #ff0024;
+    transition: all 500ms ease-in-out;
+    animation: 500ms infinite alternate box-shadow-animation;
+}
+
+.green-shadow {
+    box-shadow: 0px -0 35px #00ff10;
+    transition: all 500ms ease-in-out;
+    animation: 500ms infinite alternate box-shadow-animation;
+}
+
+.blue-shadow {
+    box-shadow: 0px -0 35px #09bae2;
+    transition: all 500ms ease-in-out;
+    animation: 500ms alternate box-shadow-animation;
+}
+
+@keyframes box-shadow-animation {
+    0% {
+        box-shadow: 0px -0 0px;
+        transform: translateX(2px);
+    }
 }
 
 .title {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .title b {
-  color: #97979d;
+    color: #fff;
+    font-size: 12px;
 }
 
 .title p {
-  margin-top: 5px;
+    margin-top: 5px;
+    color: #a3a3a3;
 }
 
 .icon-title li {
-  margin: 0px 10px;
-  float: left;
+    margin: 0px 10px;
+    float: left;
 }
 
 .button-list {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
-.button-list li{
-  position: relative;
-  display: block;
-  padding: 6px 4px;
-  margin: 2px 0px;
-  border-radius: 2px;
+.button-list li {
+    position: relative;
+    display: block;
+    padding: 6px 4px;
+    margin: 2px 0px;
+    border-radius: 2px;
 }
 
-.button-list li:not(:last-child):hover{
-  background: #0b0a0a17;
-  cursor: pointer;
+.nopadding {
+    padding: 0px 0px !important;
+}
+
+.nopadding:hover {
+    background: none !important;
+    cursor: default !important;
+}
+
+
+.button-list li:hover {
+    background: #0b0a0a17;
+    cursor: pointer;
 }
 
 .active {
-  background-color: #0b0a0a17;
-  color: #fff;
-  border-bottom: 1px solid #000;
-  cursor: default;
-  transition: all 1000ms ease-in;
+    background-color: #0b0a0a17;
+    color: #fff;
+    border-bottom: 1px solid #000;
+    cursor: default;
+    transition: all 1000ms ease-in;
 }
 
 .active::before {
-  content: '';
-  position: absolute;
-  right: 12px;
-  background: chartreuse;
-  width: 8px;
-  height: 8px;
-  border-radius: 50px;
-  top: 8px;
+    content: "";
+    position: absolute;
+    right: 12px;
+    background: chartreuse;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    top: 8px;
 }
 
 .disable {
-  cursor: default;
-  color: #ccc;
+    cursor: default;
+    color: #ccc;
 }
 
 .right-arrow {
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icons/right-arrow.png");
-  background-repeat: no-repeat;
-  margin: 0px 10px 0px 0px;
-  float: right;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icons/right-arrow.png");
+    background-repeat: no-repeat;
+    margin: 0px 10px 0px 0px;
+    float: right;
+}
+
+.manualproxy-button {
+    width: 80%;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+    float: left;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+.manualproxy-config-button {
+    width: 20%;
+    padding: 0px;
+    display: inline-block;
+    background-color: rgb(51, 51, 51);
+    margin: 0px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+.manualproxy-button:hover {
+    background-color: #0b0a0a17;
+}
+
+.manualproxy-config-button:hover {
+    background-color: #8db4ffd1;
+}
+
+.manualproxy-config-button-selected {
+    transition: all 225ms ease-in;
+    background-color: #8db4ffd1;
+}
+
+.manualproxy-config-button-active {
+    background-color: #8db4ffd1;
+}
+
+.manualproxy-config {
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icons/set_manualproxy_setting.png");
+    background-repeat: no-repeat;
+    margin: 0px 10px 0px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .noproxy {
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icons/noproxy.png");
-  background-repeat: no-repeat;
-  margin: 0px 10px 0px 0px;
-  float: left;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icons/noproxy.png");
+    background-repeat: no-repeat;
+    margin: 0px 10px 0px 0px;
+    float: left;
 }
 
-.system {
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icons/system.png");
-  background-repeat: no-repeat;
-  margin: 0px 10px 0px 0px;
-  float: left;
-  background-position-y: -1px;
+.system-os,
+.system-os-linux,
+.system-os-openbsd,
+.system-os-freebsd,
+.system-os-mac,
+.system-os-win,
+.system-os-android,
+.system-os-cros,
+.system-os-unknow {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    margin: 0px 10px 0px 0px;
+    float: left;
+    background-position-y: -1px;
+}
+
+.system-os-linux {
+    background-image: url("../images/icons/linux_16x16.png");
+}
+
+.system-os-openbsd {
+    background-image: url("../images/icons/openbsd_16x16.png");
+}
+
+.system-os-freebsd {
+    background-image: url("../images/icons/freebsd_16x16.png");
+}
+
+.system-os-mac {
+    background-image: url("../images/icons/mac_16x16.png");
+}
+
+.system-os-win {
+    background-image: url("../images/icons/windows_16x16.png");
+}
+
+.system-os-android {
+    background-image: url("../images/icons/android_16x16.png");
+}
+.system-os-cros {
+    background-image: url("../images/icons/cros_16x16.png");
+}
+
+.system-os-unknown {
+    background-image: url("../images/icons/os_16x16.png");
 }
 
 .manual {
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icons/manual.png");
-  background-repeat: no-repeat;
-  margin: 0px 10px 0px 0px;
-  float: left;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icons/manual.png");
+    background-repeat: no-repeat;
+    margin: 0px 10px 0px 4px;
+    float: left;
 }
 
 .bottom {
-  height: 25px;
-  position: relative;
+    height: 25px;
+    position: relative;
 }
 
 .bottom a {
-  position: relative;
-  text-decoration: none;
-  color: #fff;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
 }
 
 .bottom a:hover {
-  background-color: #333;
-  border-radius: 16px;
+    background-color: #333;
+    border-radius: 16px;
 }
 
 .github {
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icons/github.png");
-  background-repeat: no-repeat;
-  margin: 0px -4px 0px 0px;
-  float: left;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/icons/github.png");
+    background-repeat: no-repeat;
+    margin: 0px -4px 0px 0px;
+    float: left;
 }
 
 .home-page {
-  display: inline-block;
-  width: 95px;
-  padding: 4px 8px;
-  border-radius: 15px;
+    display: inline-block;
+    width: 95px;
+    padding: 4px 8px;
+    border-radius: 15px;
 }
 
 .home-page:hover {
-  background-color: #333;
+    background-color: #333;
 }
 
-.home-page span{
-  margin-left: 15px;
-  position: relative;
-  top: 2px;
+.home-page span {
+    margin-left: 15px;
+    position: relative;
+    top: 2px;
 }
 
 .version {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  width: 85px;
-  padding: 4px 8px;
-  border-radius: 15px;
-  float: right;
-  text-align: center;
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    width: 85px;
+    padding: 4px 8px;
+    border-radius: 15px;
+    float: right;
+    text-align: center;
 }
 
 .shortcut-switch {
-	float: right;	
-	color: #ccc;
-	font-size: 9px;
-	display: none;
+    float: right;
+    color: #ccc;
+    font-size: 9px;
+    display: none;
 }
 
 .shortcut-active {
-	display: block;
+    display: block;
+}
+
+.manualproxy-shortcut-modify {
+    margin-right: 7px !important;
+}
+
+.manualproxy-config-form-title {
+    text-align: center;
+    margin-bottom: 5px;
+    height: 22px;
+    border-bottom: 1px solid #3f3d40;
+}
+.manualproxy-config-form-title > h3 {
+    font-size: 10px;
+}
+
+.http-proxy-url,
+.https-proxy-url,
+.socks-proxy-url,
+.noproxy-proxy-urls {
+    color: white;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.manualproxy-config-form {
+    position: relative;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+.manualproxy-config-form li {
+    display: inline-block;
+    list-style: none;
+}
+
+.manualproxy-config-form li:first-child {
+    width: 70px;
+}
+.manualproxy-config-form li:last-child {
+    width: 73%;
+}
+.manualproxy-config-form li > input[type="text"] {
+    width: 97%;
+    font-size: 11px !important;
+}
+
+.manualproxy-config-form li > input[type="radio"] {
+    margin: 2px 4px 0px 2px;
+    top: 2px;
+    position: relative;
+}
+
+.set-http-url-for-https {
+    width: 16px !important;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.manualproxy-config-form-elements {
+    overflow: hidden !important;
+    height: auto;
+}
+
+.hide-element {
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0px !important;
+}
+
+.manualproxy-current-http-setting {
+    height: 18px;
+    background: #2d2d2d;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 80%;
+    position: relative;
+    top: -9px;
+    z-index: 1;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 10px;
+    transition: all 200ms ease;
+    cursor: copy;
+    font-weight: bold;
+}
+.manualproxy-current-http-setting > p {
+    display: inline-block;
+}
+
+.manualproxy-current-http-setting-template-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 6px;
+    top: -2px;
+    overflow: hidden;
+    border-radius: 50px;
+    float: left;
+}
+
+.manualproxy-current-http-setting-icon {
+    background-image: url("../images/icons/hartbeat_16x16.png");
+    width: 46px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    /* we don't use alternate because use this attribute turn animation to ping/pong mode  */
+    animation: 1s infinite manualproxy-current-http-setting-icon-animation;
+}
+
+@keyframes manualproxy-current-http-setting-icon-animation {
+    0% {
+        transform: translateX(-30px);
+    }
+}
+
+.element-opacity-0 {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
 }

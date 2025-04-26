@@ -1,65 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Switcher</title>
-    <link rel="stylesheet" href="../css/panel.css">
-  </head>
-  <body>
-    <div class="row">
-      <ul class="icon-title">
-        <li class="icon"><img class="Switcher-icon-status" src="../images/icons/tunnel_c_32x32.png" alt="Switcher"></li>
-        <li>
-          <div class="title">
-            <b>Switcher</b>
-            <p>A Proxy Setting Switcher For FireFox</p>
-          </div>
-          <!-- title -->
-        </li>
-      </ul>
-      <!-- icon-title -->
-    </div>
-    <!-- row -->
-    <div class="clear"></div>
-    <hr>
-    <div class="row">
-      <ul class="button-list">
-        <li id="noproxy-id">
-			<i class="noproxy"></i>
-			<span class="noproxy-text"> Switch To No Proxy</span>
-			<span id="noproxy-shortcut" class="shortcut-switch"> Alt+Ctrl+S </span>
-		</li>
-        <li id="systemproxy-id">
-			<i class="system"></i>
-			<span class="systemproxy-text"> Switch To System Proxy</span>
-			<span id="systemproxy-shortcut" class="shortcut-switch"> Alt+Ctrl+S </span>
-		</li>
-        <li id="manualproxy-id" class="disable">
-			<i class="manual"></i>
-			<span> Set Manual Proxy</span>
-			<i class="right-arrow"></i>
-		</li>
-      </ul>
-      <!-- button-list -->
-    </div>
-    <!-- row -->
-    <hr>
-    <div class="row bottom">
-      <a href="https://github.com/vheidari/switcher" target="_blank">
-        <div class="home-page">
-          <i class="github"></i>
-          <span>Home Page</span>
+    <head>
+        <meta charset="utf-8" />
+        <title>Switcher</title>
+        <link rel="stylesheet" href="../css/panel.css" />
+    </head>
+    <body>
+        <div class="row">
+            <ul class="icon-title">
+                <li class="icon">
+                    <img
+                        class="Switcher-icon-status"
+                        src="../images/icons/tunnel_c_32x32.png"
+                        alt="Switcher"
+                    />
+                </li>
+                <li>
+                    <div class="title">
+                        <b>Switcher</b>
+                        <p>A Proxy Setting Switcher For FireFox</p>
+                    </div>
+                    <!-- title -->
+                </li>
+            </ul>
+            <!-- icon-title -->
         </div>
-        <!-- home-page -->
-      </a>
-      <div class="version">
-        <span id="switcher-version">Version : ---  </span>
-      </div>
-      <!-- version -->
-    </div>
-    <!-- row -->
-  </body>
-  <script src="../scripts/browser_actions.js"></script>
-  <script src="../scripts/panel.js"></script> 
-  <script src="../scripts/panel_functions.js"></script> 
+        <!-- row -->
+        <div class="clear"></div>
+        <hr />
+        <div class="row">
+            <ul class="button-list">
+                <li id="noproxy-id" class="switcher-button">
+                    <i class="noproxy"></i>
+                    <span class="noproxy-text" data-name="No Proxy">
+                        Switch To No Proxy
+                    </span>
+                    <span id="noproxy-shortcut" class="shortcut-switch">
+                        Alt+Ctrl+S
+                    </span>
+                </li>
+                <li id="systemproxy-id" class="switcher-button">
+                    <i class="system-os system-os-unknown"></i>
+                    <span class="systemproxy-text" data-name="System Proxy">
+                        Switch To System Proxy
+                    </span>
+                    <span id="systemproxy-shortcut" class="shortcut-switch">
+                        Alt+Ctrl+S
+                    </span>
+                </li>
+                <li id="" class="nopadding">
+                    <div
+                        id="manualproxy-id"
+                        class="manualproxy-button switcher-button"
+                    >
+                        <i class="manual"></i>
+                        <span class="manualproxy-text" data-name="Manual Proxy">
+                            Switch To Manual Proxy
+                        </span>
+                        <span
+                            id="manualproxy-shortcut"
+                            class="shortcut-switch manualproxy-shortcut-modify"
+                        >
+                            Alt+Ctrl+S
+                        </span>
+                    </div>
+                    <div
+                        id="manualproxy-config-button-id"
+                        class="manualproxy-config-button"
+                    >
+                        <i class="manualproxy-config"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- button-list -->
+        </div>
+        <!-- row -->
+        <div class="clear"></div>
+        <div class="row">
+            <div
+                id="manualproxy-current-http-setting"
+                class="manualproxy-current-http-setting hide-element"
+            >
+                <div class="manualproxy-current-http-setting-template-icon">
+                    <i class="manualproxy-current-http-setting-icon"></i>
+                </div>
+                <p>
+                    HTTP PROXY IP :
+                    <span id="manualproxy-show-current-http-proxy">
+                        127.0.0.1:2855
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- .row -->
+        <div class="row">
+            <div class="manualproxy-config-form-elements hide-element">
+                <div class="manualproxy-config-form-title">
+                    <h3>Configure Proxy Access to the Internet</h3>
+                </div>
+                <ul class="manualproxy-config-form">
+                    <li>
+                        <label for="http-proxy-url"> Http Proxy : </label>
+                    </li>
+                    <li>
+                        <input
+                            type="text"
+                            id="http-proxy-url"
+                            name="http-proxy-url"
+                            class="http-proxy-url"
+                            placeholder="Ex : http://127.0.0.1:8080"
+                            title="Auto save is enabled; just type the correct address."
+                        />
+                        <input
+                            type="checkbox"
+                            id="set-http-url-for-https"
+                            class="set-http-url-for-https"
+                            value="false"
+                            title="Also use this proxy for Https"
+                        />
+                    </li>
+                </ul>
+                <ul class="manualproxy-config-form">
+                    <li>
+                        <label for="https-proxy-url"> Https Proxy : </label>
+                    </li>
+                    <li>
+                        <input
+                            type="text"
+                            id="https-proxy-url"
+                            name="https-proxy-url"
+                            class="https-proxy-url"
+                            placeholder="Ex : 127.0.0.1:8081"
+                            title="Auto save is enabled; just type the correct address."
+                        />
+                    </li>
+                </ul>
+                <ul class="manualproxy-config-form">
+                    <li>
+                        <label for="socks-proxy-url"> Socks Proxy : </label>
+                    </li>
+                    <li>
+                        <input
+                            type="text"
+                            id="socks-proxy-url"
+                            name="socks-proxy-url"
+                            class="socks-proxy-url"
+                            placeholder="Ex : 127.0.0.1:1212"
+                            title="Auto save is enabled; just type the correct address."
+                        />
+                    </li>
+                </ul>
+                <ul class="manualproxy-config-form">
+                    <li>
+                        <label for="noproxy-proxy-urls"> No Proxy for : </label>
+                    </li>
+                    <li>
+                        <input
+                            type="text"
+                            id="noproxy-proxy-urls"
+                            name="noproxy-proxy-urls"
+                            class="noproxy-proxy-urls"
+                            placeholder="Ex : .x.com,.net.nz,192.168.1.1"
+                            title="Auto save is enabled; just type the correct address."
+                        />
+                    </li>
+                </ul>
+
+                <ul class="manualproxy-config-form">
+                    <li>
+                        <label for="socks-proxy-item"> Socks: </label>
+                    </li>
+                    <li>
+                        <label for="version4">Version 4</label>
+                        <input
+                            type="radio"
+                            id="version4"
+                            name="socks"
+                            value="version4"
+                            checked
+                        />
+                        <label for="version5">Version 5</label>
+                        <input
+                            type="radio"
+                            id="version5"
+                            name="socks"
+                            value="version5"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- .row -->
+
+        <div class="clear"></div>
+
+        <hr />
+        <div class="row bottom">
+            <a href="https://github.com/vheidari/switcher" target="_blank">
+                <div class="home-page">
+                    <i class="github"></i>
+                    <span>Home Page</span>
+                </div>
+                <!-- home-page -->
+            </a>
+            <div class="version">
+                <span id="switcher-version">Version : --- </span>
+            </div>
+            <!-- version -->
+        </div>
+        <!-- row -->
+    </body>
+    <script src="../scripts/browser_actions.js"></script>
+    <script src="../scripts/panel.js"></script>
+    <script src="../scripts/panel_events.js"></script>
+    <script src="../scripts/panel_functions.js"></script>
 </html>
