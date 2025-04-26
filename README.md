@@ -8,9 +8,19 @@ At this moment, Switcher version `2.0.0` is available on `addons.mozilla.org`. T
 
 [Switcher](https://addons.mozilla.org/en-US/firefox/addon/switcher_proxy/) `https://addons.mozilla.org/en-US/firefox/addon/switcher_proxy/`
 
+
+
+![SwitcherBanner](./switcher-images/switcher-github-banner-three.webp)
+
+
+
 ## Debugging and Temporary Installation in Mozilla Firefox
 Please follow these two steps:
 
 1. First, download or clone this repository: `git clone https://github.com/vheidari/switcher.git`
 
 2. Second, type `about:debugging#/runtime/this-firefox` in the Firefox address bar, then click on the `Load Temporary Add-on` button and load the `manifest.json` file.
+
+
+![SwitcherBanner](./switcher-images/switcher-github-banner-two.webp)
+
