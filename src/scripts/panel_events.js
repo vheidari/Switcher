@@ -33,6 +33,7 @@ function setManualProxyFormEvents() {
         let getLocalStorageObject = JSON.parse(
           localStorage.getItem("SwitcherManualProxyConfig"),
         );
+        getLocalStorageObject.proxyType = "manual";
         getLocalStorageObject.ssl = getHttpFieldValue;
 
         // directly update http and https same value field firefox settings
@@ -49,6 +50,7 @@ function setManualProxyFormEvents() {
         let getLocalStorageObject = JSON.parse(
           localStorage.getItem("SwitcherManualProxyConfig"),
         );
+        getLocalStorageObject.proxyType = "manual";
         getLocalStorageObject.ssl = "";
 
         // directly update http and https same value field firefox settings

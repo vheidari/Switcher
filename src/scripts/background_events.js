@@ -61,6 +61,11 @@ browser.commands.onCommand.addListener(function (command) {
             );
           } else {
             manualProxySetting = JSON.parse(isSwitcherLocalStorageExist);
+            manualProxySetting.proxyType = "manual";
+            localStorage.setItem(
+              "SwitcherManualProxyConfig",
+              JSON.stringify(manualProxySetting),
+            );
             browser.proxy.settings.set({ value: manualProxySetting });
           }
 
