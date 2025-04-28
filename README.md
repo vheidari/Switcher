@@ -25,7 +25,7 @@ Here is a simple list of features that `Switcher` will bring to your browser.
 
 
 ## Downloading Switcher
-At this moment, Switcher version `2.0.0` is available on `addons.mozilla.org`. To download and use this extension, please follow the link below:
+At this moment, Switcher version `2.0.1` is available on `addons.mozilla.org`. To download and use this extension, please follow the link below:
 
 [Switcher](https://addons.mozilla.org/en-US/firefox/addon/switcher_proxy/) `https://addons.mozilla.org/en-US/firefox/addon/switcher_proxy/`
 

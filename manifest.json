@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Switcher",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Vahid Heidari",
   "developer": {
     "name": "Vahid Heidari",
@@ -26,7 +26,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "",
+      "id": "{9ad1063a-6774-4627-af9c-d9250e609efc}",
       "strict_min_version": "91.1.0"
     }
   },
